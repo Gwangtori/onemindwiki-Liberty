@@ -15,7 +15,7 @@
         {{imp[3][3]|safe}}
         <link rel="stylesheet" href="/views/liberty/css/style.css?ver=7">
         <link href="https://fonts.googleapis.com/css?family=Dokdo|Gaegu|Nanum+Gothic|Nanum+Gothic+Coding|Nanum+Myeongjo|Noto+Serif+KR|Noto+Sans+KR&amp;display=swap&amp;subset=korean" rel="stylesheet">
-        <link rel="shortcut icon" href="/views/main_css/file/favicon.ico">
+        <link rel="shortcut icon" href="/views/main_css/favicon.ico">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script type="text/javascript" src="/views/liberty/js/jquery-ui.min.js?ver=1"></script>
         <script type="text/javascript" src="/views/liberty/js/bootstrap.min.js?ver=1"></script>
@@ -56,6 +56,16 @@
                         <div class="dropdown-menu" role="menu">
                             <a class="dropdown-item" href="/skin_set"><span class="fa fa-cog"></span><span class="hide-title">{{'skin_set'|load_lang}}</span></a>
                             <a class="dropdown-item" href="/upload"><span class="fa fa-upload"></span><span class="hide-title">{{'upload'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/admin_list" class="dropdown-item"><span class="hide-title"></span>{{'admin_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/admin_log" class="dropdown-item"><span class="hide-title"></span>{{'authority_use_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/not_close_topic" class="dropdown-item"><span class="hide-title"></span>{{'open_discussion_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/title_index" class="dropdown-item"><span class="hide-title"></span>{{'all_document_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/please" class="dropdown-item"><span class="hide-title"></span>{{'need_document'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/long_page" class="dropdown-item"><span class="hide-title"></span>{{'long_page'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/short_page" class="dropdown-item"><span class="hide-title"></span>{{'short_page'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/old_page" class="dropdown-item"><span class="hide-title"></span>{{'old_page'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/block_log" class="dropdown-item"><span class="hide-title"></span>{{'recent_ban'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/vote" class="dropdown-item"><span class="hide-title"></span>{{'vote_list'|load_lang}}</span></a>
                             <a class="dropdown-item" href="/other"><span class="fa fa-plus-circle"></span><span class="hide-title">{{'tool'|load_lang}}</span></a>
                         </div>
                     </li>
@@ -69,9 +79,9 @@
                         <div class="dropdown login-menu">
                             <a href="/user" title="{{imp[2][5]}}">
                                 {% if imp[2][4] != '' %}
-                                    <img class="profile-img" src="https://secure.gravatar.com/avatar/{{imp[2][4]|md5_replace}}?d=identicon">
+                                    <img class="profile-img" src="//secure.gravatar.com/avatar/{{imp[2][4]|md5_replace}}?d=retro">
                                 {% else %}
-                                    <img class="profile-img" src="https://secure.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&f=y">
+                                    <img class="profile-img" src="//secure.gravatar.com/avatar/{{imp[2][4]|md5_replace}}?d=retro">
                                 {% endif %}
                             </a>
                         </div>
@@ -116,15 +126,19 @@
                         </div>
                         <div class="live-recent-footer">
                             <a id="liberty_recent_link" href="/recent_changes" title="{{'recent_change'|load_lang}}">
-                                <span class="label label-info">More</span>
+                                <span class="label label-info">더보기</span>
                             </a>
                         </div>
+                    </div>
+                    <div class="right-ads">
                     </div>
                 </div>
             </div>
             <div class="container-fluid liberty-content">
                 <div class="liberty-content-header">
                     {% if not menu == 0 %}
+                        <div class="header-ads">
+                        </div>
                         <div class="content-tools">
                             <div class="btn-group" role="group" aria-label="content-tools">
                                 {% for sub_d in menu %}
@@ -172,8 +186,8 @@
                         {{imp[1][1]|safe}}
                     </p>
                     <div id="powered">
-                        <a href="https://github.com/2DU/openNAMU"><img src="/views/main_css/file/s_logo.png" width="100px"></a>
-                        <a href="https://librewiki.net/"><img src="/views/liberty/img/designedbylibre.png" width="100px"></a>
+                        <a href="https://github.com/2DU/openNAMU"><img src="/views/main_css/file/s_logo.png" width="100px"></a> | 
+                        <a href="https://librewiki.net/"><img src="/views/liberty/img/designedbylibre.png" width="75px"></a>
                     </div>
                 </div>
             </div>
