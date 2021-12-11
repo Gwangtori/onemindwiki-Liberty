@@ -1,10 +1,19 @@
 ## 개요
-오픈나무용 Liberty 스킨 입니다.
+한마음위키에서 사용하는 리버티 스킨입니다.
+
+## 오픈나무 공식 리버티 스킨이랑 무엇이 다른가
+> 제 실력이 매우 별로이기 때문에 자잘자잘하게 추가, 수정한 것이 다입니다.
+* 도구를 눌렀을 때 좀 더 풍성하게 나옵니다.
+* 그라바타를 나무위키에서 쓰는 것과 동일하게 바꿨습니다.
+* css 파일에 메인 컬러, 세컨드 컬러를 써서 쉽게 수정할 수 있게 만들었습니다.
+* index.html에 광고를 넣는 자리를 마련했습니다.
+* 사이드바에 more를 더보기로 바꿨습니다.
+* 하단에 리버티 로고를 오픈나무 로고 크기와 비슷하게 조정했습니다.
 
 ## 사용법
 다운 받고 폴더 이름을 `liberty`로 변경한 후 `views`에 넣으면 됩니다.
 
 ## Git 명령어
 ```
-git clone https://github.com/openNAMU/openNAMU-Skin-Liberty.git liberty
+git clone https://github.com/Gwangtori/onemindwiki-Liberty.git liberty
 ```
