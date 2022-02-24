@@ -34,6 +34,7 @@
             <meta name="description" content="{{data|cut_100}}">
         {% endif %}
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#F74646">
     </head>
     <body class="Liberty">
         <div class="nav-wrapper navbar-fixed-top">
@@ -56,17 +57,21 @@
                         <div class="dropdown-menu" role="menu">
                             <a class="dropdown-item" href="/skin_set"><span class="fa fa-cog"></span><span class="hide-title">{{'skin_set'|load_lang}}</span></a>
                             <a class="dropdown-item" href="/upload"><span class="fa fa-upload"></span><span class="hide-title">{{'upload'|load_lang}}</span></a>
-                            <a class="dropdown-item" href="/admin_list" class="dropdown-item"><span class="hide-title"></span>{{'admin_list'|load_lang}}</span></a>
-                            <a class="dropdown-item" href="/admin_log" class="dropdown-item"><span class="hide-title"></span>{{'authority_use_list'|load_lang}}</span></a>
-                            <a class="dropdown-item" href="/not_close_topic" class="dropdown-item"><span class="hide-title"></span>{{'open_discussion_list'|load_lang}}</span></a>
-                            <a class="dropdown-item" href="/title_index" class="dropdown-item"><span class="hide-title"></span>{{'all_document_list'|load_lang}}</span></a>
-                            <a class="dropdown-item" href="/please" class="dropdown-item"><span class="hide-title"></span>{{'need_document'|load_lang}}</span></a>
-                            <a class="dropdown-item" href="/long_page" class="dropdown-item"><span class="hide-title"></span>{{'long_page'|load_lang}}</span></a>
-                            <a class="dropdown-item" href="/short_page" class="dropdown-item"><span class="hide-title"></span>{{'short_page'|load_lang}}</span></a>
-                            <a class="dropdown-item" href="/old_page" class="dropdown-item"><span class="hide-title"></span>{{'old_page'|load_lang}}</span></a>
-                            <a class="dropdown-item" href="/block_log" class="dropdown-item"><span class="hide-title"></span>{{'recent_ban'|load_lang}}</span></a>
-                            <a class="dropdown-item" href="/vote" class="dropdown-item"><span class="hide-title"></span>{{'vote_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/admin_list"><span class="hide-title"></span>{{'admin_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/admin_log"><span class="hide-title"></span>{{'authority_use_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/title_index"><span class="hide-title"></span>{{'all_document_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/please"><span class="hide-title"></span>{{'need_document'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/long_page"><span class="hide-title"></span>{{'long_page'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/short_page"><span class="hide-title"></span>{{'short_page'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/old_page"><span class="hide-title"></span>{{'old_page'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/block_log"><span class="hide-title"></span>{{'recent_ban'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/user_log"><span class="hide-title"></span>{{'member_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/image_file_list"><span class="hide-title"></span>{{'image_file_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/vote"><span class="hide-title"></span>{{'vote_list'|load_lang}}</span></a>
                             <a class="dropdown-item" href="/other"><span class="fa fa-plus-circle"></span><span class="hide-title">{{'tool'|load_lang}}</span></a>
+                            {% if imp[2][9] != '0' %}
+                                <a class="dropdown-item" href="/manager/1"><span class="hide-title"></span>{{'admin_tool'|load_lang}}</span></a>
+                            {% endif %}
                         </div>
                     </li>
                 </ul>
@@ -81,7 +86,7 @@
                                 {% if imp[2][4] != '' %}
                                     <img class="profile-img" src="//secure.gravatar.com/avatar/{{imp[2][4]|md5_replace}}?d=retro">
                                 {% else %}
-                                    <img class="profile-img" src="//secure.gravatar.com/avatar/{{imp[2][4]|md5_replace}}?d=retro">
+                                    <img class="profile-img" src="//secure.gravatar.com/avatar/{{imp[2][5]|md5_replace}}?d=retro">
                                 {% endif %}
                             </a>
                         </div>
@@ -186,8 +191,7 @@
                         {{imp[1][1]|safe}}
                     </p>
                     <div id="powered">
-                        <a href="https://github.com/2DU/openNAMU"><img src="/views/main_css/file/s_logo.png" width="100px"></a> | 
-                        <a href="https://librewiki.net/"><img src="/views/liberty/img/designedbylibre.png" width="75px"></a>
+                        <a href="https://gitlab.com/librewiki/Liberty-MW-Skin">Liberty</a> | <a href="https://github.com/openNAMU/openNAMU">openNAMU</a>
                     </div>
                 </div>
             </div>
