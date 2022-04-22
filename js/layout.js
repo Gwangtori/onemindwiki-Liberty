@@ -2,6 +2,15 @@
 let isAllowRequestList = true;
 let liberty_load_type = 'A';
 
+function liberty_do_func_xss_encode(data) {
+    data = data.replace(/'/g, '&#x27;');
+    data = data.replace(/"/g, '&quot;');
+    data = data.replace(/</g, '&lt;');
+    data = data.replace(/</g, '&gt;');
+
+    return data;
+}
+
 //매개 변수 parent는 ul태그여야 합니다
 function ShowAjaxRecentList(parent) {
 	function temp() {
@@ -14,8 +23,8 @@ function ShowAjaxRecentList(parent) {
                 for(var i = 0 ; i < res.length && i < 10 ; i++) {
                     var item = res[i];
 
-                    html += '<li><a class="recent-item" href="/w/' + encodeURIComponent(item[1]) + '" title="' + item[1] +'">';
-                    html += "[" + item[2].replace(/^([^ ]+) /, '') + "] ";
+                    html += '<li><a class="recent-item" href="/w/' + encodeURIComponent(item[1]) + '" title="' + liberty_do_func_xss_encode(item[1]) +'">';
+                    html += "[" + liberty_do_func_xss_encode(item[2].replace(/^([^ ]+) /, '')) + "] ";
                     var text = item[1];
                     if(text.length > 13) {
                         text = text.substr(0,13);
@@ -38,8 +47,8 @@ function ShowAjaxRecentList(parent) {
                 for(var i = 0 ; i < res.length && i < 10 ; i++) {
                     var item = res[i];
 
-                    html += '<li><a class="recent-item" href="/thread/' + encodeURIComponent(item[3]) + '" title="' + item[1] +'">';
-                    html += "[" + item[2].replace(/^([^ ]+) /, '') + "] ";
+                    html += '<li><a class="recent-item" href="/thread/' + encodeURIComponent(item[3]) + '" title="' + liberty_do_func_xss_encode(item[1]) +'">';
+                    html += "[" + liberty_do_func_xss_encode(item[2].replace(/^([^ ]+) /, '')) + "] ";
                     var text = item[1];
                     if(text.length > 13) {
                         text = text.substr(0,13);
