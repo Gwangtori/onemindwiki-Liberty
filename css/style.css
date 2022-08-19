@@ -8,6 +8,7 @@
 
 li {
     margin-left: 20px;
+    margin: 0.4em 0;
 }
 
 .btn.btn-secondary.tools-btn.dropdown-toggle {
@@ -81,7 +82,7 @@ blockquote {
 }
 
 td {
-    padding: 3px 8px 3px 8px;
+   padding: 5px 10px;
     border: 1px solid #dddddd;
 }
 
