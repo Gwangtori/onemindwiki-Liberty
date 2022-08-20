@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    font-size: 0.95rem;
+    font-size: 0.96rem;
 }
 
 body, h1, h2, h3, h4, h5, h6, b {
@@ -525,7 +525,7 @@ del, s, strike {
     padding: 1rem;
     padding-bottom: 30px;
     overflow: hidden;
-    line-height: 1.6rem;
+    line-height: 1.5rem;
 }
 
 .Liberty .content-wrapper .liberty-content .liberty-content-main .social-buttons {
