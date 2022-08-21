@@ -114,9 +114,9 @@ s:hover, strike:hover, del:hover {
 
 div.scroll-buttons a {
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
     border: 2px solid #fff;
     border-left: 0;
     text-decoration: none;
@@ -129,12 +129,12 @@ div.scroll-buttons a {
 div.scroll-buttons {
     position: fixed;
     float: right;
-    height: 40px;
+    height: 42px;
     text-align: right;
-    font-size: 1.7em;
+    font-size: 1.8rem;
     z-index: 10000;
-    bottom: 1em;
-    right: 1em;
+    bottom: 1rem;
+    right: 1rem;
     opacity: 0.8;
 }
 
@@ -238,11 +238,12 @@ button#come:hover {
 
 .scroll-toc {
     margin-right: -7px;
+    font-size: 1.8rem;
     border-radius: 0.7rem 0 0 0.7rem;
 }
 
 #left {
-    margin-right: -8px;
+    margin-right: -7px;
 }
 
 #right {
