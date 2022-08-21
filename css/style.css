@@ -131,7 +131,7 @@ div.scroll-buttons {
     float: right;
     height: 42px;
     text-align: right;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     z-index: 10000;
     bottom: 1rem;
     right: 1rem;
@@ -238,7 +238,6 @@ button#come:hover {
 
 .scroll-toc {
     margin-right: -7px;
-    font-size: 1.8rem;
     border-radius: 0.7rem 0 0 0.7rem;
 }
 
