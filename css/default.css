@@ -175,6 +175,8 @@ del, s, strike {
 .Liberty .nav-wrapper .navbar .navbar-brand {
     height: 2.8rem;
     padding: 0;
+    align-items: center;
+    display: flex;
 }
 
 .Liberty .nav-wrapper .navbar .navbar-nav .nav-item {
