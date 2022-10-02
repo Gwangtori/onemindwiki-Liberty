@@ -116,13 +116,11 @@ div.scroll-buttons a {
     display: inline-block;
     width: 42px;
     height: 42px;
-    line-height: 42px;
+    line-height: 38px;
     border: 2px solid #fff;
-    border-left: 0;
     text-decoration: none;
     text-align: center;
     background: #F74646;
-    border-bottom: 0;
     color: white;
 }
 
@@ -237,12 +235,12 @@ button#come:hover {
 }
 
 .scroll-toc {
-    margin-right: -7px;
+    margin-right: -8px;
     border-radius: 0.7rem 0 0 0.7rem;
 }
 
 #left {
-    margin-right: -7px;
+    margin-right: -8px;
 }
 
 #right {
