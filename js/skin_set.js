@@ -28,7 +28,7 @@ function regex_data(data) {
 var cookies = document.cookie;
 
 function skin_set() {
-    if(window.location.pathname === '/skin_set') {
+    if(window.location.pathname === '/change/skin_set') {
         var set_language = {
             "en-US" : {
                 "save" : "Save",
