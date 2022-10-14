@@ -7,7 +7,7 @@
 }
 
 li {
-    margin: 0.4rem 1rem;
+    margin: 0.4em 0 0.4em 1em;
 }
 
 .btn.btn-secondary.tools-btn.dropdown-toggle {
@@ -77,7 +77,7 @@ img, iframe {
 }
 
 blockquote {
-    border-left: 5px solid #4188F1;
+    border-left: 5px solid #F74646;
 }
 
 td {
@@ -117,7 +117,7 @@ div.scroll-buttons a {
     width: 42px;
     height: 42px;
     line-height: 38px;
-    border: 2px solid #fff;
+    border: 2px solid #efefef;
     text-decoration: none;
     text-align: center;
     background: #F74646;

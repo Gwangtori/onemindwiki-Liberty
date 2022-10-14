@@ -117,7 +117,7 @@ th[rowspan]:after, td[rowspan]:after {
 }
 
 input[type=search] {
-    -webkit-appearance: none; /* iOS 잡다한 css설정 제거 */
+    appearance: none; /* iOS 잡다한 css설정 제거 */
 }
 
 textarea {
@@ -151,12 +151,12 @@ del, s, strike {
 }
 /* 백그라운드 색 지정 End*/
 
-/* 컨텐츠 넓이 수정 및 가운대 정렬 */
+/* 컨텐츠 넓이 수정 및 가운데 정렬 */
 .Liberty .nav-wrapper .navbar, .Liberty .content-wrapper {
     max-width: 1200px;
     margin: 0 auto;
 }
-/* 컨텐츠 넓이 수정 및 가운대 정렬 End */
+/* 컨텐츠 넓이 수정 및 가운데 정렬 End */
 
 /* 네비 수정 */
 .Liberty .nav-wrapper {
@@ -564,6 +564,14 @@ del, s, strike {
 .Liberty .content-wrapper .liberty-content .liberty-content-main .social-buttons>.google {
     background-color: #eb5e4c;
     display: none;
+}
+
+#topic_color {
+    background-color: #BBEABB;
+}
+
+#topic_color:hover {
+background-color: #A8EAA8;
 }
 /* 컨텐츠 수정 End */
 
