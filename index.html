@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="/views/liberty/css/jquery-ui.min.css?ver=1">
         {{imp[3][3]|safe}}
         <link rel="stylesheet" href="/views/liberty/css/style.css?ver=9">
+        <link rel="stylesheet" as="style" crossorigin href="/views/liberty/css/pretendard.css" />
         {% if request.cookies.get('main_css_darkmode', '') == '1' %}
             <link rel="stylesheet" href="/views/liberty/css/dark.css?ver=4">
         {% endif %}
@@ -36,6 +37,8 @@
             <meta name="description" content="{{data|cut_100}}">
         {% endif %}
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:type" content="website">
+        <meta name="theme-color" content="#F74646">
     </head>
     <body class="Liberty">
         <div class="nav-wrapper navbar-fixed-top">
@@ -56,9 +59,23 @@
                             <span class="fa fa-wrench"></span><span class="hide-title">{{'tool'|load_lang}}</span>
                         </a>
                         <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" href="/skin_set"><span class="fa fa-cog"></span><span class="hide-title">{{'skin_set'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/change/skin_set"><span class="fa fa-cog"></span><span class="hide-title">{{'skin_set'|load_lang}}</span></a>
                             <a class="dropdown-item" href="/upload"><span class="fa fa-upload"></span><span class="hide-title">{{'upload'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/admin_list"><span class="fa fa-user-secret"></span><span class="hide-title">{{'admin_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/admin_log"><span class="fa fa-outdent"></span><span class="hide-title">{{'authority_use_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/title_index"><span class="fa fa-folder-open"></span><span class="hide-title">{{'all_document_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/please"><span class="fa fa-chain-broken"></span><span class="hide-title">{{'need_document'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/long_page"><span class="fa fa-file-text-o"></span><span class="hide-title">{{'long_page'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/short_page"><span class="fa fa-file-o"></span><span class="hide-title">{{'short_page'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/old_page"><span class="fa fa-pause"></span><span class="hide-title">{{'old_page'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/block_log"><span class="fa fa-low-vision"></span><span class="hide-title">{{'recent_ban'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/user_log"><span class="fa fa-users"></span><span class="hide-title">{{'member_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/image_file_list"><span class="fa fa-file-image-o"></span><span class="hide-title">{{'image_file_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/vote"><span class="fa fa-ticket"></span><span class="hide-title">{{'vote_list'|load_lang}}</span></a>
                             <a class="dropdown-item" href="/other"><span class="fa fa-plus-circle"></span><span class="hide-title">{{'tool'|load_lang}}</span></a>
+                            {% if imp[2][9] != '0' %}
+                                <a class="dropdown-item" href="/manager/1"><span class="fa fa-sliders"></span><span class="hide-title">{{'admin_tool'|load_lang}}</span></a>
+                            {% endif %}
                         </div>
                     </li>
                 </ul>
@@ -71,9 +88,9 @@
                         <div class="dropdown login-menu">
                             <a href="/user" title="{{imp[2][5]}}">
                                 {% if imp[2][4] != '' %}
-                                    <img class="profile-img" src="https://secure.gravatar.com/avatar/{{imp[2][4]|md5_replace}}?d=identicon">
+                                    <img class="profile-img" src="https://secure.gravatar.com/avatar/{{imp[2][4]|md5_replace}}?d=retro">
                                 {% else %}
-                                    <img class="profile-img" src="https://secure.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&f=y">
+                                    <img class="profile-img" src="https://secure.gravatar.com/avatar/00000000000000000000000000000000?d=retro&f=y">
                                 {% endif %}
                             </a>
                         </div>
@@ -118,8 +135,10 @@
                         </div>
                         <div class="live-recent-footer">
                             <a id="liberty_recent_link" href="/recent_changes" title="{{'recent_change'|load_lang}}">
-                                <span class="label label-info">More</span>
+                                <span class="label label-info">더보기</span>
                             </a>
+                        </div>
+                        <div class="right-ads">
                         </div>
                     </div>
                 </div>
@@ -174,8 +193,7 @@
                         {{imp[1][1]|safe}}
                     </p>
                     <div id="powered">
-                        <a href="https://github.com/2DU/openNAMU"><img src="/views/main_css/file/s_logo.png" width="100px"></a>
-                        <a href="https://librewiki.net/"><img src="/views/liberty/img/designedbylibre.png" width="100px"></a>
+                        <a href="https://gitlab.com/librewiki/Liberty-MW-Skin">Liberty</a> | <a href="https://github.com/openNAMU/openNAMU">openNAMU</a>
                     </div>
                 </div>
             </div>
