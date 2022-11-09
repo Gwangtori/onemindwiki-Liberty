@@ -74,7 +74,6 @@ pre {
     padding: 20px;
     font-size: 15px;
     margin-bottom: 20px;
-    margin-top: 20px;
 }
 
 #toc-name, .opennamu_TOC_title {
@@ -91,12 +90,6 @@ pre {
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    
-    background-color: #f5f8fa;
-    
-    border: 1px solid #e1e8ed;
-    border-top-right-radius: 0.35rem;
-    border-top-left-radius: 0.35rem;
 }
 
 div.scroll-buttons a {
@@ -149,8 +142,7 @@ div.scroll-buttons {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin: 1.2rem 0 0.8rem;
     padding-bottom: 5px;
     border-bottom: 1px solid #ccc;
 }
@@ -217,7 +209,8 @@ button#come:hover {
     border-radius: 5px;
     font-size: .9rem;
     margin-top: 1rem;
-    padding: 5px 5px 5px 7px;
+    margin-bottom: 1rem;
+    padding: 4px 4px 4px 6px;
     display: inline-block;
     width: 100%;
 }
