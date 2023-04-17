@@ -14,12 +14,12 @@
         <link rel="stylesheet" href="/views/liberty/css/jquery-ui.min.css?ver=1">
         {{imp[3][3]|safe}}
         <link rel="stylesheet" href="/views/liberty/css/style.css?ver=10">
+        <link rel="stylesheet" href="/views/liberty/css/more.css">
         {% if request.cookies.get('main_css_darkmode', '') == '1' %}
             <link rel="stylesheet" href="/views/main_css/css/sub/dark.css?ver=4">
             <link rel="stylesheet" href="/views/liberty/css/dark.css?ver=4">
         {% endif %}
-        <link href="https://fonts.googleapis.com/css?family=Dokdo|Gaegu|Nanum+Gothic|Nanum+Gothic+Coding|Nanum+Myeongjo|Noto+Serif+KR|Noto+Sans+KR&amp;display=swap&amp;subset=korean" rel="stylesheet">
-        <link rel="shortcut icon" href="/views/main_css/file/favicon.ico">
+        <link rel="shortcut icon" href="/image/favicon.ico">
         <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
@@ -36,7 +36,9 @@
         {% if imp[2][12] != 0 and imp[2][12] == 'w' %}
             <meta name="description" content="{{data|cut_100}}">
         {% endif %}
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta property="og:type" content="website">
+        <meta name="theme-color" content="#F74646">
     </head>
     <body class="Liberty">
         <div class="nav-wrapper navbar-fixed-top">
@@ -49,20 +51,45 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/recent_discuss"><span class="fa fa-comments"></span><span class="hide-title">{{'recent_discussion'|load_lang}}</span></a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/random"><span class="fa fa-random"></span><span class="hide-title">{{'random'|load_lang}}</span></a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle dropdown-toggle-fix" href="#" data-toggle="dropdown" aria-expanded="false">
-                            <span class="fa fa-wrench"></span><span class="hide-title">{{'tool'|load_lang}}</span>
+                            <span class="fa fa-gear"></span><span class="hide-title">{{'tool'|load_lang}}</span>
                         </a>
                         <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" href="/random"><span class="fa fa-random"></span><span class="hide-title">{{'random'|load_lang}}</span></a>
-                            <a class="dropdown-item" href="/change/skin_set"><span class="fa fa-cog"></span><span class="hide-title">{{'skin_set'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/other"><span class="fa fa-plus-circle"></span><span class="hide-title">{{'tool'|load_lang}}</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/skin_set"><span class="fa fa-wrench"></span><span class="hide-title">{{'skin_set'|load_lang}}</span></a>
                             <a class="dropdown-item" href="/upload"><span class="fa fa-upload"></span><span class="hide-title">{{'upload'|load_lang}}</span></a>
-                            <a class="dropdown-item" href="/other"><span class="fa fa-cogs"></span><span class="hide-title">{{'other_tool'|load_lang}}</span></a>
-                            {% if imp[2][9] != '0' %}
-                                <a class="dropdown-item" href="/manager"><span class="fa fa-folder"></span><span class="hide-title">{{'admin_tool'|load_lang}}</span></a>
-                            {% endif %}
+                            <a class="dropdown-item" href="/admin_list"><span class="fa fa-user-secret"></span><span class="hide-title">{{'admin_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/list/admin/auth_use"><span class="fa fa-outdent"></span><span class="hide-title">{{'authority_use_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/list/document/all"><span class="fa fa-folder-open"></span><span class="hide-title">{{'all_document_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/please"><span class="fa fa-chain-broken"></span><span class="hide-title">{{'need_document'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/long_page"><span class="fa fa-file-text-o"></span><span class="hide-title">{{'long_page'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/short_page"><span class="fa fa-file-o"></span><span class="hide-title">{{'short_page'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/old_page"><span class="fa fa-pause"></span><span class="hide-title">{{'old_page'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/block_log"><span class="fa fa-low-vision"></span><span class="hide-title">{{'recent_ban'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/user_log"><span class="fa fa-users"></span><span class="hide-title">{{'member_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/image_file_list"><span class="fa fa-file-image-o"></span><span class="hide-title">{{'image_file_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/vote"><span class="fa fa-ticket"></span><span class="hide-title">{{'vote_list'|load_lang}}</span></a>
                         </div>
                     </li>
+                    {% if imp[2][9] != '0' %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle dropdown-toggle-fix" href="#" data-toggle="dropdown" aria-expanded="false">
+                                <span class="fa fa-sliders"></span><span class="hide-title">{{'admin_tool'|load_lang}}</span>
+                            </a>
+                            <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" href="/manager"><span class="fa fa-sliders"></span><span class="hide-title">{{'admin_tool'|load_lang}}</span></a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/manager/3"><span class="hide-title">{{'check_user'|load_lang}}</span></a>
+                                <a class="dropdown-item" href="/auth/give/ban"><span class="hide-title">{{'ban'|load_lang}}</span></a>
+                                <a class="dropdown-item" href="/manager/5"><span class="hide-title">{{'authorize'|load_lang}}</span></a>
+                            </div>
+                        </li>
+                    {% endif %}
                     {% if imp[1][6] != '' %}
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle dropdown-toggle-fix" href="#" data-toggle="dropdown" aria-expanded="false">
@@ -80,37 +107,71 @@
                     {% endif %}
                 </ul>
                 <div class="navbar-login">
-                    {% if imp[2][2] == 0 %}
-                        <a href="/user" title="{{imp[2][5]}}" class="none-outline">
-                            <span class="fa fa-sign-in"></span>
+                    <div class="dropdown login-menu">
+                        <a class="dropdown-toggle" type="button" id="login-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {% if imp[2][2] == 0 %}
+                                <span class="fa fa-user"></span>
+                            {% else %}
+                            {% if imp[2][4] != '' %}
+                                <img class="profile-img" src="https://secure.gravatar.com/avatar/{{imp[2][4]|md5_replace}}?d=retro">
+                            {% else %}
+                                <img class="profile-img" src="https://secure.gravatar.com/avatar/00000000000000000000000000000000?d=retro&f=y">
+                            {% endif %}
+                            {% endif %}
                         </a>
-                    {% else %}
-                        <div class="dropdown login-menu">
-                            <a href="/user" title="{{imp[2][5]}}">
-                                {% if imp[2][4] != '' %}
-                                    <img class="profile-img" src="https://secure.gravatar.com/avatar/{{imp[2][4]|md5_replace}}?d=identicon">
-                                {% else %}
-                                    <img class="profile-img" src="https://secure.gravatar.com/avatar/00000000000000000000000000000000?d=identicon&f=y">
-                                {% endif %}
-                            </a>
+                        <div aria-labelledby="login-menu" class="dropdown-menu dropdown-menu-right login-dropdown-menu">
+                            <div class="login-dropdown-name">
+                                <div class="login-dropdown-name1">
+                                    {{imp[2][10]}}
+                                </div>
+                                <div class="login-dropdown-name2">
+                                    {% if imp[2][2] == 0 %}
+                                    IP User
+                                    {% else %}
+                                    {% if imp[2][4] != '' %}
+                                    Member
+                                    {% endif %}
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/user"><span class="hide-title">{{'user_tool'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/change"><span class="hide-title">{{'user_setting'|load_lang}}</span></a>
+                            {% if imp[2][2] == 1 %}
+                                <a class="dropdown-item" href="/w/user:{{imp[2][10]}}"><span class="hide-title">{{'user_document'|load_lang}}</span></a>
+                            {% endif %}
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/record/{{imp[2][10]}}"><span class="hide-title">{{'edit_record'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/record/topic/{{imp[2][10]}}"><span class="hide-title">{{'discussion_record'|load_lang}}</span></a>
+                            {% if imp[2][2] == 1 %}
+                                <a class="dropdown-item" href="/watch_list"><span class="hide-title">{{'watchlist'|load_lang}}</span></a>
+                                <a class="dropdown-item" href="/star_doc"><span class="hide-title">{{'star_doc'|load_lang}}</span></a>
+                            {% endif %}
+                            <div class="dropdown-divider"></div>
+							{% if imp[2][2] == 1 %}
+                                <a class="dropdown-item" href="/logout"><span class="hide-title">{{'logout'|load_lang}}</span></a>
+                            {% else %}
+                            <a class="dropdown-item" href="/login"><span class="hide-title">{{'login'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/register"><span class="hide-title">{{'register'|load_lang}}</span></a>
+                            {% endif %}
                         </div>
-                    {% endif %}
+                    </div>
                 </div>
                 <form method="post" action="/search" id="searchform" class="form-inline">
                     <div class="input-group">
                         <input type="search" name="search" placeholder="{{'search'|load_lang}}" accesskey="f" class="form-control" id="searchInput" autocomplete="off">
                         <span class="input-group-btn">
-                            <button formaction="/goto" name="go" value="view" id="searchGoButton" class="btn btn-secondary"><span class="fa fa-eye"></span></button>
-                            <button name="fulltext" value="search" id="searchSearchButton" class="btn btn-secondary"><span class="fa fa-search"></span></button>
+                            <button formaction="/goto" name="go" value="view" id="searchGoButton" class="btn btn-secondary"><span class="fa fa-search"></span></button>
+                            <button name="fulltext" value="search" id="searchSearchButton" class="btn btn-secondary"><span class="fa fa-arrow-right"></span></button>
                         </span>
                     </div>
                 </form>
             </nav>
         </div>
         <div class="scroll-buttons">
-            <a class="scroll-toc" href="#toc" id="scroll-button-toc"><i class="fa fa-list-alt" aria-hidden="true"></i></a><!--
-         --><a class="scroll-button" href="#" id="scroll-button-left"><i class="fa fa-arrow-up" aria-hidden="true"></i></a><!--
-         --><a class="scroll-bottom" href="#powered" id="scroll-button-right"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+            <a class="scroll-toc" href="#toc" id="scroll-button-toc"><i class="fa fa-list-ul" aria-hidden="true"></i></a><!--
+            --><a class="scroll-button" href="#" id="scroll-button-left"><i class="fa fa-angle-up" aria-hidden="true"></i></a><!--
+            --><a class="scroll-bottom" href="#powered" id="scroll-button-right"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
         </div>
         <div class="content-wrapper">
             <div class="liberty-sidebar">
@@ -135,7 +196,7 @@
                         </div>
                         <div class="live-recent-footer">
                             <a id="liberty_recent_link" href="/recent_changes" title="{{'recent_change'|load_lang}}">
-                                <span class="label label-info">More</span>
+                                <span class="label label-info">더 보기</span>
                             </a>
                         </div>
                     </div>
@@ -147,24 +208,10 @@
                         <div class="content-tools">
                             <div class="btn-group" role="group" aria-label="content-tools">
                                 {% for sub_d in menu %}
-                                    {% if loop.index > 5 %}
-                                        {% if loop.index == 6 %}
-                                            <button type="button" class="btn btn-secondary tools-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                                <span class="caret"></span>
-                                            </button>
-                                            <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                            {% set i = 0 %}
-                                        {% endif %}
-                                        <a class="dropdown-item" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
+                                    {% if sub_d|length > 2 and sub_d[2] == 1 %}
+                                        <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}" id="topic_color">{{sub_d[1]}}</a>
                                     {% else %}
-                                        {% if sub_d|length > 2 and sub_d[2] == 1 %}
-                                            <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}" id="topic_color">{{sub_d[1]}}</a>
-                                        {% else %}
-                                            <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
-                                        {% endif %}
-                                    {% endif %}
-                                    {% if not menu[loop.index] and loop.index > 5 %}
-                                        </div>
+                                        <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
                                     {% endif %}
                                 {% endfor %}
                             </div>
@@ -172,11 +219,16 @@
                     {% endif %}
                     <div class="title">
                         <h1 id="main_title">
-                            {{imp[0]}}
+                            <a class="main_title_a" href="/w/{{imp[0]}}">{{imp[0]}}</a>
                             {% if imp[3][0] != 0 %}
                                 <sub>{{imp[3][0]}}</sub>
                             {% endif %}
                         </h1>
+                    </div>
+                    <div class="last-edit">
+                        {% if imp[3][1] != 0 %}
+                            {{'last_edit_time'|load_lang}}: {{imp[3][1]}}
+                        {% endif %}
                     </div>
                 </div>
                 <div class="liberty-content-main wiki-article">
@@ -184,15 +236,10 @@
                 </div>
                 <div class="liberty-footer" id="bottom">
                     <p>
-                        {% if imp[3][1] != 0 %}
-                            {{'last_edit_time'|load_lang}} : {{imp[3][1]}}
-                            <br>
-                        {% endif %}
                         {{imp[1][1]|safe}}
                     </p>
                     <div id="powered">
-                        <a href="https://github.com/2DU/openNAMU"><img src="/views/main_css/file/s_logo.png" width="100px"></a>
-                        <a href="https://librewiki.net/"><img src="/views/liberty/img/designedbylibre.png" width="100px"></a>
+                        <a href="https://github.com/onemindwiki/Liberty-skin">Liberty</a> | <a href="https://github.com/openNAMU/openNAMU">openNAMU</a>
                     </div>
                 </div>
             </div>
