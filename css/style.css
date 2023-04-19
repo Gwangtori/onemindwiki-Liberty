@@ -2,12 +2,8 @@ li {
     margin: 0.4em 0 0.4em 1em;
 } /* ♥ */
 
-.main_title_a {
-    color: #373a3c;
-} /* ♥ */
-
-.main_title_a:hover {
-    color: #373a3c;
+.main_title_a, .main_title_a:hover, .main_title_a:active {
+    color: #000;
 } /* ♥ */
 
 .opennamu_ul {

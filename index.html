@@ -61,7 +61,7 @@
                         <div class="dropdown-menu" role="menu">
                             <a class="dropdown-item" href="/other"><span class="fa fa-plus-circle"></span><span class="hide-title">{{'tool'|load_lang}}</span></a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/skin_set"><span class="fa fa-wrench"></span><span class="hide-title">{{'skin_set'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/change/skin_set"><span class="fa fa-wrench"></span><span class="hide-title">{{'skin_set'|load_lang}}</span></a>
                             <a class="dropdown-item" href="/upload"><span class="fa fa-upload"></span><span class="hide-title">{{'upload'|load_lang}}</span></a>
                             <a class="dropdown-item" href="/admin_list"><span class="fa fa-user-secret"></span><span class="hide-title">{{'admin_list'|load_lang}}</span></a>
                             <a class="dropdown-item" href="/list/admin/auth_use"><span class="fa fa-outdent"></span><span class="hide-title">{{'authority_use_list'|load_lang}}</span></a>
@@ -224,11 +224,11 @@
                                 <sub>{{imp[3][0]}}</sub>
                             {% endif %}
                         </h1>
-                    </div>
-                    <div class="last-edit">
-                        {% if imp[3][1] != 0 %}
-                            {{'last_edit_time'|load_lang}}: {{imp[3][1]}}
-                        {% endif %}
+                        <div class="last-edit">
+                            {% if imp[3][1] != 0 %}
+                                {{'last_edit_time'|load_lang}}: {{imp[3][1]}}
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
                 <div class="liberty-content-main wiki-article">

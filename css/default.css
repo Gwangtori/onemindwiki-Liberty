@@ -182,8 +182,7 @@ del, s, strike {
     background-color: var(--main-color);
     z-index: 1001;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-    font-weight: 700;
-} /* ♥ */
+}
 
 .Liberty .nav-wrapper .navbar {
     padding: 0 1rem;
@@ -201,6 +200,7 @@ del, s, strike {
 
 .Liberty .nav-wrapper .navbar .navbar-nav .nav-item {
     margin: 0;
+    font-weight: 700;
 }
 
 .Liberty .nav-wrapper .navbar .navbar-nav .nav-item .fa {
@@ -331,7 +331,7 @@ del, s, strike {
 } /* ♥ */
 
 .login-dropdown-name2 {
-    font-size: 12px;
+    font-size: 13px;
 } /* ♥ */
 
 .Liberty .nav-wrapper .navbar .navbar-login .login-dropdown-menu:before, .Liberty .nav-wrapper .navbar .navbar-login .login-dropdown-menu:after {
@@ -612,7 +612,6 @@ border-color: #ccc;
 
 .last-edit {
     font-size: 0.9rem;
-    margin: -0.9rem 1rem 0.6rem 0;
     text-align: right;
 } /* ♥ */
 /* 컨텐츠 수정 End */
