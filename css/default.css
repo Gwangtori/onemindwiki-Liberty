@@ -309,7 +309,7 @@ del, s, strike {
 
 .Liberty .nav-wrapper .navbar .nav navbar-nav .nav-dropdown-menu,
 .Liberty .nav-wrapper .navbar .navbar-login .login-dropdown-menu {
-    right: -0.25rem;
+    right: -0.5rem;
     z-index: 1002;
 } /* ♥ */
 
