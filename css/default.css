@@ -4,6 +4,10 @@
     --border-color: #e1e8ed; /* 테두리 색입니다. 굳이 수정은 안 하셔도 됩니다. */
 } /* ♥ */
 
+:target {
+    padding-top: 9rem;
+} /* ♥ */
+
 /* 태그 수정 */
 * {
     outline: none;
