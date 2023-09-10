@@ -221,7 +221,11 @@ h1, h2, h3, h4, h5, h6 hr,
 }
 
 .opennamu_comment_blind_not {
-	background: #1f2023;
+	background: #27292d;
+}
+
+.opennamu_comment_blind_admin {
+	background: #6b6b6b;
 }
 
 textarea, input, button, select {
