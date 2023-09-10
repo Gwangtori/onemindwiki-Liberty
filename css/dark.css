@@ -68,11 +68,11 @@ a.dropdown-item, .login-dropdown-name {
     background-color: #383b40;
 }
 
-.Liberty .nav-wrapper .navbar .navbar-login .login-dropdown-menu:before {
+.Liberty .nav-wrapper .navbar .navbar-login .login-dropdown-menu:before, .nav-dropdown-menu:before {
     border-bottom-color: #555;
 }
 
-.Liberty .nav-wrapper .navbar .navbar-login .login-dropdown-menu:after {
+.Liberty .nav-wrapper .navbar .navbar-login .login-dropdown-menu:after, .nav-dropdown-menu:after {
     border-bottom-color: #000;
 }
 
