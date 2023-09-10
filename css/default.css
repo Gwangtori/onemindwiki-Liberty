@@ -194,6 +194,7 @@ del, s, strike {
     display: flex;
     font-size: 1.25rem;
     font-weight: 700;
+    max-width: 95px !important;
 } /* ♥ */
 
 .Liberty .nav-wrapper .navbar .navbar-nav .nav-item {
