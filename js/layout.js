@@ -38,8 +38,6 @@ function ShowAjaxRecentList(parent) {
                         }
                         html += liberty_do_func_xss_encode(text);
                         html += "</a></li>";
-                    } else {
-                        html += "<li>[---] ---</li>";
                     }
                 }
                 
