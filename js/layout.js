@@ -34,44 +34,19 @@ function ShowAjaxRecentList(parent) {
                 var text = item[1];
                 if (text.length > 18) {
                     text = text.substr(0, 18);
-                        text +="...";
-                        }
-                        html += liberty_do_func_xss_encode(text);
-                        html += "</a></li>";
-                    }
+                    text += "...";
                 }
-                
-                if(parent != null) {
-                    jQuery(parent).html(html);
-                }
-            });
-        } else {
-            jQuery.ajax({
-                url: "/api/recent_discuss/10", // 호출 URL
-                dataType:'json'
-            }).done(function(res) {
-                let html = "";
-                for(let i = 0; i < res.length && i < 10; i++) {
-                    let item = res[i];
+                html += text;
+                html += "</a></li>";
+            }
 
-                    html += '<li><a class="recent-item" href="/thread/' + encodeURIComponent(item[3]) + '" title="' + liberty_do_func_xss_encode(item[1]) +'">';
-                    html += "[" + item[2].replace(/^([^ ]+) /, '') + "] ";
-                    let text = item[1];
-                    if(text.length > 13) {
-                        text = text.substr(0, 13);
-                        text +="...";
-                    }
-                    html += liberty_do_func_xss_encode(text);
-                    html += "</a></li>";
-                }
-                
-                if(parent != null) {
-                    jQuery(parent).html(html);
-                }
-            });
-        }
-	}
-	temp();
+            if (parent != null) {
+                jQuery(parent).html(html);
+            }
+        });
+    }
+
+    temp();
 }
 
 function liberty_side_load(get_type) {
