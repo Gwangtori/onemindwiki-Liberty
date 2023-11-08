@@ -34,11 +34,15 @@ function ShowAjaxRecentList(parent) {
                 var text = item[1];
                 if (text.length > 18) {
                     text = text.substr(0, 18);
-                    text += "...";
+                        text +="...";
+                        }
+                        html += liberty_do_func_xss_encode(text);
+                        html += "</a></li>";
+                    } else {
+                        html += "<li>[---] ---</li>";
+                    }
                 }
-                html += text;
-                html += "</a></li>";
-	    }
+                
                 if(parent != null) {
                     jQuery(parent).html(html);
                 }
