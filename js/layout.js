@@ -16,7 +16,7 @@ function ShowAjaxRecentList(parent) {
 	function temp() {
         if(liberty_load_type === 'A') {
             jQuery.ajax({
-                url: "/api/recent_change/10", // 호출 URL
+                url: "https://namgall.wikiing.in/api/open_recent_changes/10", // 호출 URL
                 dataType:'json'
             }).done(function(res) {
                 let html = "";
