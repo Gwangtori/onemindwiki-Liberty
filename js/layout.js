@@ -27,7 +27,7 @@ function ShowAjaxRecentList(parent) {
 	                } else if (liberty_do_func_xss_encode(item[7]) == "위브") {
 	                    html += '<li><a class="recent-item" href="https://weve.wiki/w/' + encodeURIComponent(item[1]) + '" title="' + liberty_do_func_xss_encode(item[1]) + '">';
 	                } else if (liberty_do_func_xss_encode(item[7]) == "시드") {
-	                    html += '<li><a class="recent-item" href="https://seecl.wiki/w/' + encodeURIComponent(item[1]) + '" title="' + liberty_do_func_xss_encode(item[1]) + '">';
+	                    html += '<li><a class="recent-item" href="https://seedwiki.cloud/w/' + encodeURIComponent(item[1]) + '" title="' + liberty_do_func_xss_encode(item[1]) + '">';
 	                } else if (liberty_do_func_xss_encode(item[7]) == "다올") {
 	                    html += '<li><a class="recent-item" href="https://wiki.daol.cc/w/' + encodeURIComponent(item[1]) + '" title="' + liberty_do_func_xss_encode(item[1]) + '">';
 	                }
