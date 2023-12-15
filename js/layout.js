@@ -22,16 +22,7 @@ function ShowAjaxRecentList(parent) {
 	            var html = "";
 	            for (var i = 0; i < res.length && i < 10; i++) {
 	                var item = res[i];
-	                if (liberty_do_func_xss_encode(item[7]) == "소나") {
-	                    html += '<li><a class="recent-item" href="https://sona.wiki/w/' + encodeURIComponent(item[1]) + '" title="' + liberty_do_func_xss_encode(item[1]) + '">';
-	                } else if (liberty_do_func_xss_encode(item[7]) == "위브") {
-	                    html += '<li><a class="recent-item" href="https://weve.wiki/w/' + encodeURIComponent(item[1]) + '" title="' + liberty_do_func_xss_encode(item[1]) + '">';
-	                } else if (liberty_do_func_xss_encode(item[7]) == "시드") {
-	                    html += '<li><a class="recent-item" href="https://seedwiki.cloud/w/' + encodeURIComponent(item[1]) + '" title="' + liberty_do_func_xss_encode(item[1]) + '">';
-	                } else if (liberty_do_func_xss_encode(item[7]) == "다올") {
-	                    html += '<li><a class="recent-item" href="https://wiki.daol.cc/w/' + encodeURIComponent(item[1]) + '" title="' + liberty_do_func_xss_encode(item[1]) + '">';
-	                }
-	                html += "[" + liberty_do_func_xss_encode(item[2].replace(/^([^ ]+) /, '')) + "] " + "[" + liberty_do_func_xss_encode(item[7]) + "] ";
+	                html += '<li><a class="recent-item" href="'+ item[8] + encodeURIComponent(item[1]) + '" title="' + liberty_do_func_xss_encode(item[1]) + '">';
 	                var text = item[1];
 	                if (text.length > 18) {
 	                    text = text.substr(0, 18);
