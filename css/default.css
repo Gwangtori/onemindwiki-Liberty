@@ -35,7 +35,7 @@ body {
 } /* ♥ */
 
 body, h1, h2, h3, h4, h5, h6, b {
-    font-family: 'LINESeedSansKR','Malgun Gothic','Apple SD Gothic Neo', sans-serif;
+    font-family: 'Pretendard','Malgun Gothic','Apple SD Gothic Neo', sans-serif;
 } /* ♥ */
 
 body {
@@ -47,7 +47,7 @@ input[type=password] {
 }
 
 h1, h2, h3, h4, h5, h6, b {
-    font-weight: 600;
+    font-weight: 700;
 } /* ♥ */
 
 h1 {
@@ -197,13 +197,13 @@ del, s, strike {
     align-items: center;
     display: flex;
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 700;
     max-width: 95px !important;
 } /* ♥ */
 
 .Liberty .nav-wrapper .navbar .navbar-nav .nav-item {
     margin: 0;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .Liberty .nav-wrapper .navbar .navbar-nav .nav-item .fa {
@@ -325,7 +325,7 @@ del, s, strike {
 
 .login-dropdown-name1 {
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 0.1rem;
 } /* ♥ */
 
@@ -547,7 +547,7 @@ del, s, strike {
 
 .Liberty .content-wrapper .liberty-content .liberty-content-header .title>h1 {
     color: #000;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .Liberty .content-wrapper .liberty-content .liberty-content-header .header-ads {
