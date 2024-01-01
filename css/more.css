@@ -145,21 +145,21 @@ blockquote {
 /* 폰트 불러오기 */
 @font-face {
 	font-family: 'LINESeedSansKR';
-	font-weight: Bold;
+	font-weight: 700;
 	font-display: block;
 	src: local('LINE Seed Sans KR Bold'), url('/views/liberty/fonts/woff2LINESeedKR-Bd.woff2') format('woff2'), url('/views/liberty/fonts/woffLINESeedKR-Bd.woff') format('woff');
 }
 
 @font-face {
 	font-family: 'LINESeedSansKR';
-	font-weight: Regular;
+	font-weight: 400;
 	font-display: block;
 	src: local('LINE Seed Sans KR Regular'), url('/views/liberty/fonts/woff2/LINESeedKR-Rg.woff2') format('woff2'), url('/views/liberty/fonts/woff/LINESeedKR-Rg.woff') format('woff');
 }
 
 @font-face {
 	font-family: 'LINESeedSansKR';
-	font-weight: Thin;
+	font-weight: 100;
 	font-display: block;
 	src: local('LINE Seed Sans KR Thin'), url('/views/liberty/fonts/woff2/LINESeedKR-Th.woff2') format('woff2'), url('/views/liberty/fonts/woff/LINESeedKR-Th.woff') format('woff');
 }
