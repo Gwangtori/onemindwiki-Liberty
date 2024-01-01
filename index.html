@@ -227,38 +227,7 @@
                     {% endif %}
                     <div class="title">
                         <h1 id="main_title">
-                            {% if imp[2][12] != 0 and imp[2][12][0] == 'w'  %}
                                 <a class="main_title_a" href="/w/{{imp[0]}}">{{imp[0]}}</a>
-                            {% else %}
-			    {% if imp[2][12] != 0 and imp[2][12][0] == 'edit'  %}
-                                <a class="main_title_a" href="/w/{{imp[0]}}">{{imp[0]}}</a>
-                            {% else %}
-			    {% if imp[2][12] != 0 and imp[2][12][0] == 'topic'  %}
-                                <a class="main_title_a" href="/w/{{imp[0]}}">{{imp[0]}}</a>
-                            {% else %}
-			    {% if imp[2][12] != 0 and imp[2][12][0] == 'history'  %}
-                                <a class="main_title_a" href="/w/{{imp[0]}}">{{imp[0]}}</a>
-                            {% else %}
-			    {% if imp[2][12] != 0 and imp[2][12][0] == 'xref'  %}
-                                <a class="main_title_a" href="/w/{{imp[0]}}">{{imp[0]}}</a>
-                            {% else %}
-                            {% if imp[2][12] != 0 and imp[2][12][0] == 'acl'  %}
-                                <a class="main_title_a" href="/w/{{imp[0]}}">{{imp[0]}}</a>
-                            {% else %}
-			    {% if imp[2][12] != 0 and imp[2][12][0] == 'delete_file'  %}
-                                <a class="main_title_a" href="/w/{{imp[0]}}">{{imp[0]}}</a>
-                            {% else %}
-		            {% if imp[2][12] != 0 and imp[2][12][0] == 'thread'  %}
-                                <a class="main_title_a" href="/w/{{imp[0]}}">{{imp[0]}}</a>
-                            {% else %}
-			    {% if imp[2][12] != 0 and imp[2][12][0] == 'move'  %}
-                                <a class="main_title_a" href="/w/{{imp[0]}}">{{imp[0]}}</a>
-                            {% else %}
-			    {% if imp[2][12] != 0 and imp[2][12][0] == 'delete'  %}
-                                <a class="main_title_a" href="/w/{{imp[0]}}">{{imp[0]}}</a>
-                            {% else %}
-                                {{imp[0]}}
-                            {% endif %}
                             {% if imp[3][0] != 0 %}
                                 <sub>{{imp[3][0]}}</sub>
                             {% endif %}
