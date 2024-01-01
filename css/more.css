@@ -145,7 +145,7 @@ blockquote {
 /* 폰트 불러오기 */
 @font-face {
 	font-family: 'LINESeedSansKR';
-	font-weight: 700;
+	font-weight: 600;
 	font-display: block;
 	src: local('LINE Seed Sans KR Bold'), url('/views/liberty/fonts/woff2LINESeedKR-Bd.woff2') format('woff2'), url('/views/liberty/fonts/woffLINESeedKR-Bd.woff') format('woff');
 }
