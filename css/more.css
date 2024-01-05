@@ -90,7 +90,6 @@ blockquote {
 /* 토론 디자인 */
 .opennamu_comment {
 	max-width: 100%;
-    min-width: 400px;
 	width: auto;
 	word-wrap: break-word;
 	position: relative;
@@ -134,6 +133,12 @@ blockquote {
 	border-top: none;
 	background: #6b6b6b;
 	color: #fff;
+}
+
+@media screen and (min-width: 701px) {
+	.opennamu_comment {
+		min-width: 400px;
+	}
 }
 
 @media screen and (max-width: 700px) {

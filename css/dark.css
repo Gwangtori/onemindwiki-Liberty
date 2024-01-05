@@ -221,7 +221,7 @@ h1, h2, h3, h4, h5, h6 hr,
 }
 
 .opennamu_comment_blind_not {
-	background: #27292d;
+	background: #27292d !important;
 }
 
 .opennamu_comment_blind_admin {
