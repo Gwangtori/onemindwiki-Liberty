@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* 수평선 */
-hr {
+hr, .opennamu_footnote {
 	margin: 1rem 0;
     border-color: #ccc;
 }
@@ -58,9 +58,17 @@ blockquote {
 	background: #eee;
 	border: 2px dashed #ccc;
 	border-left: 5px solid #71bc6d;
-	display: table;
 	margin: 1em 0;
 	padding: 1em;
+}
+
+/* 상단 공지 */
+.vision-top-notice {
+    background-color: rgb(217, 83, 79);
+	padding: 4px 8px;
+	border-radius: 4px;
+	margin: 1rem 0;
+    color: #fff;
 }
 
 /* 분류, 넘겨주기 알림 */
@@ -75,7 +83,7 @@ blockquote {
     width: 100%;
 }
 
-#redirect {
+#redirect, .opennamu_trace {
     background-color: #d9edf7;
     border: 1px solid #bcdff1;
     border-radius: 0.25rem;

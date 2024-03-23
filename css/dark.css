@@ -214,7 +214,7 @@ h1, h2, h3, h4, h5, h6 hr,
     border-color: #777;
 }
 
-#redirect {
+#redirect, .opennamu_trace {
     background-color: #2d2f34;
     border-color: #383b40;
     color: #ddd;

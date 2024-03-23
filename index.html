@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{'language_tag'|load_lang}}">
     <head>
         <meta charset="utf-8">
         {% if imp[3][0] != 0 %}
@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="/views/liberty/css/style.css.cache_v10">
         <link rel="stylesheet" href="/views/liberty/css/more.css.cache_v2">
         {% if request.cookies.get('main_css_darkmode', '') == '1' %}
-            <link rel="stylesheet" href="/views/main_css/css/sub/dark.css.cache_v4">
+            {{imp[3][5]|safe}}
             <link rel="stylesheet" href="/views/liberty/css/dark.css.cache_v4">
         {% endif %}
         <link rel="shortcut icon" href="/image/favicon.ico">
@@ -202,15 +202,21 @@
                         </div>
                         <div class="live-recent-footer">
                             <a id="liberty_recent_link" href="/recent_changes" title="{{'recent_change'|load_lang}}">
-                                <span class="label label-info">{{imp[1][0]}} 최근 편집</span>
+                                <span class="label label-info">{{imp[1][0]}} {{'recent_change'|load_lang}}</span>
                             </a>
                         </div>
                         <div class="right-ads">
+                            {{imp[1][7][1]|safe}}
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container-fluid liberty-content">
+            <div class="container-fluid liberty-content"> 
+            {% if imp[1][7][0] != '' %}
+                <div class="vision-top-notice">
+                    {{imp[1][7][0]|safe}}
+                </div>
+            {% endif %}
                 <div class="liberty-content-header">
                     {% if not menu == 0 %}
                         <div class="content-tools">
@@ -243,6 +249,9 @@
                     {{data|safe}}
                 </div>
                 <div class="liberty-footer" id="bottom">
+                    <p>
+                        {{imp[1][7][2]|safe}}
+                    </p>
                     <p>
                         {{imp[1][1]|safe}}
                     </p>
